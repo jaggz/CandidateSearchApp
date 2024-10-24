@@ -4,10 +4,12 @@
 - SO THAT Employer can hire the best candidates.
 - We Untilize Git Hub API to get the Profiles and select from those list of Candidates.
 - Saved Candidates then be presented as Potential Candidates in the table.
-- Here is the link for the APP Deployed on Render : 
+- Here is the link for the APP Deployed on Render : `https://candidatesearchapp-3.onrender.com`
 ## Usage
 - WHEN the candidate search page loads. as Below:
- ![PageScreenshot](./src/assets/images/PageScreenshot.png)
+
+ ![HomePage](./src/assets/images/HomePage.png)
+
 
 - THEN the information for one candidate is displayed, including the candidate's name, username, location, avatar, email, html_url, and company
 - WHEN we click the "+" button,
@@ -17,6 +19,9 @@
 - WHEN there are no candidates available to review
 - THEN a message is shown indicating no more candidates are available or refresh page to get more Candidates from API.
 - WHEN the potential candidates page loads
+
+ ![potentialCandidatePage](./src/assets/images/potentialCandidatePage.png)
+
 - THEN the user would be presented with a list of previously saved potential candidates with their name, username, location, avatar, email, html_url, and company in the table.
 - WHEN the page reloads
 - THEN the list of potential candidates persists (`LocalStorage`) and be available for viewing
