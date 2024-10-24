@@ -23,11 +23,6 @@ const SavedCandidates = () => {
   const rejectedClickHandler = (e:SyntheticEvent,index:number)=>{
     e.preventDefault();
     potentialUsers.splice(index,1);
-    // const filteredData:Candidate[] = potentialUsers.filter((user,index)=>{
-    //   if(user.login !== userName){
-    //     return user;
-    //   }
-    // });
     setPotentialUsers(potentialUsers);
     localStorage.setItem('potentialCandidates',JSON.stringify(potentialUsers));
     setPotentialUsers(getCandidatesFromLocalStorage());
@@ -46,7 +41,7 @@ const SavedCandidates = () => {
   return (
     <>
       <h1>Potential Candidates</h1>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Image</th>
@@ -63,14 +58,22 @@ const SavedCandidates = () => {
           //  setKey(key+1);
           
           return <tr key={index}>
-          <td><img src={user.avatar_url?user.avatar_url:''}/></td>
+          <td><img className="profilepic" alt='Profile Pic' src={user.avatar_url?user.avatar_url:'' }/></td>
           <td>{user.name?user.name:'No name'}</td>
           <td>{user.location?user.location:'No location'}</td>
           <td>{user.email?user.email:'no email'}</td>
           <td>{user.company?user.company:''}</td>
           <td>{user.bio?user.bio:''}</td>
-          <td><button key={index} onClick={(e)=>rejectedClickHandler(e,index)}>-</button></td>
-        </tr>}):'No Potential Candidate '}
+          <td><button  className="buttonDelete" key={index} onClick={(e)=>rejectedClickHandler(e,index)}>-</button></td>
+        </tr>}):<tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>No Potential Candidate</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>}
         
         </tbody>
       </table>

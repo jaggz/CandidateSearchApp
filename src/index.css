@@ -44,7 +44,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 50px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -52,6 +52,7 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
+  
   transition: border-color 0.25s;
 }
 button:hover {
@@ -117,4 +118,37 @@ tbody tr:nth-child(odd) {
 .table {
   width: 80vw;
   table-layout: fixed;
+  word-break: break-word;
+  text-align: center;
+}
+.table .profilepic{
+  width:50px;
+  height:50px;
+  border-radius: 10px;
+}
+.profilepic{
+  width:200px;
+  height:200px;
+  border-radius: 10px;
+}
+.table .buttonDelete{
+  float:none;
+}
+.buttonDelete{
+  background-color: red;
+  float:inline-start;
+}
+.buttonSelected{
+  background-color: green;
+  float:inline-end;
+}
+.candidateProfile{
+  border: 3px solid white;
+  border-radius: 20px;
+  text-align: center;
+  padding:50px;
+ 
+}
+.candidateProfile div{
+  text-align: left;
 }
